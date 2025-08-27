@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Button from '../../components/Button';
 const CASHFREE_BASE_URL = import.meta.env.VITE_CASHFREE_BASE_URL;
 import { load } from '@cashfreepayments/cashfree-js';
 
@@ -81,6 +82,25 @@ const Cashfree = () => {
 
   return (
     <div style={{ padding: '20px', maxWidth: '500px', margin: '0 auto' }}>
+      {/* Navigation Section */}
+      <div style={{ 
+        marginBottom: '30px', 
+        padding: '20px', 
+        backgroundColor: '#f8f9fa', 
+        borderRadius: '8px',
+        textAlign: 'center'
+      }}>
+        <h3 style={{ marginBottom: '15px', color: '#333' }}>Navigation</h3>
+        <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Button variant="primary" size="medium" to="/">
+            About Us
+          </Button>
+          <Button variant="secondary" size="medium" to="/cashfree">
+            Cashfree
+          </Button>
+        </div>
+      </div>
+
       <h2>Customer Order Form</h2>
       
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>

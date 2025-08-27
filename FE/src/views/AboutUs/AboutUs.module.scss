@@ -1,0 +1,53 @@
+@import 'src/styles/constants';
+@import 'src/styles/mixins';
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $blue;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: $blue-100;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.navigationSection {
+  background: $white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $blue;
+  margin-bottom: 1.5rem;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.navButton {
+  min-width: 200px;
+}
