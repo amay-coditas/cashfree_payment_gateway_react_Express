@@ -13,7 +13,7 @@
   ],
   "tasks": {
     "frontend": {
-      "name": "Frontend",
+      "name": "FE",
       "command": "npm start",
       "runAtStart": true,
       "cwd": "FE",
@@ -23,7 +23,7 @@
       }
     },
     "backend": {
-      "name": "Backend",
+      "name": "BE",
       "command": "npm start",
       "runAtStart": true,
       "cwd": "BE",
