@@ -1,0 +1,54 @@
+@mixin heading($fontSize) {
+  font-family: Roboto-Bold;
+  font-size: $fontSize;
+}
+
+@mixin paragraph($fontFamily, $fontSize) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+}
+
+@mixin buttonAppearance($backgroundColor, $textColor) {
+  background-color: $backgroundColor;
+  color: $textColor;
+}
+
+@mixin flexStyling(
+  $flexDirection: row,
+  $justifyContent: flex-start,
+  $alignItems: flex-start,
+  $gap: 0
+) {
+  display: flex;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  gap: $gap;
+}
+
+@function toRem($value) {
+  $remValue: calc($value / 16) + rem;
+  @return $remValue;
+}
+
+@mixin toasterAppearance($backgroundColor, $textColor, $borderColor) {
+  background-color: $backgroundColor;
+  color: $textColor;
+  border-radius: 4px;
+  border: 0.5px solid $borderColor;
+}
+
+@mixin typography(
+  $fontFamily: $roboto-regular,
+  $fontWeight: 500,
+  $fontSize: toRem(16),
+  $lineHeight: 100%,
+  $letterSpacing: 0px
+) {
+  font-family: $fontFamily;
+  font-style: normal;
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+}
