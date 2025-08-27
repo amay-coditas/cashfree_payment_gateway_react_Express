@@ -13,12 +13,14 @@
   ],
   "tasks": {
     "frontend": {
+      "name": "Frontend",
       "command": "npm start",
       "runAtStart": true,
       "workingDirectory": "FE",
-      "preview": true,
+      "preview": true
     },
     "backend": {
+      "name": "Backend",
       "command": "npm start",
       "runAtStart": true,
       "workingDirectory": "BE"
