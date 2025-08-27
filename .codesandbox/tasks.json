@@ -17,13 +17,19 @@
       "command": "npm start",
       "runAtStart": true,
       "workingDirectory": "FE",
-      "preview": true
+      "preview": {
+        "port": 3000,
+        "prLink": true
+      }
     },
     "backend": {
       "name": "Backend",
       "command": "npm start",
       "runAtStart": true,
-      "workingDirectory": "BE"
+      "workingDirectory": "BE",
+      "preview": {
+        "port": 3002
+      }
     }
   }
 }
