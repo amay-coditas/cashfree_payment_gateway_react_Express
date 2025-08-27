@@ -3,30 +3,30 @@
     {
       "name": "Install FE dependencies",
       "command": "npm install",
-      "cwd": "FE"
+      "dir": "FE"
     },
     {
       "name": "Install BE dependencies",
       "command": "npm install",
-      "cwd": "BE"
+      "dir": "BE"
     }
   ],
   "tasks": {
     "frontend": {
-      "name": "FE",
+      "name": "frontend",
       "command": "npm start",
       "runAtStart": true,
-      "cwd": "FE",
+      "dir": "FE",
       "preview": {
         "port": 3000,
         "prLink": true
       }
     },
     "backend": {
-      "name": "BE",
+      "name": "backend",
       "command": "npm start",
       "runAtStart": true,
-      "cwd": "BE",
+      "dir": "BE",
       "preview": {
         "port": 3002
       }
