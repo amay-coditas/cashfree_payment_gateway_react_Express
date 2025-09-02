@@ -1,22 +1,10 @@
 {
-  "setupTasks": [
-    {
-      "name": "Install FE dependencies",
-      "command": "npm install",
-      "dir": "FE"
-    },
-    {
-      "name": "Install BE dependencies",
-      "command": "npm install",
-      "dir": "BE"
-    }
-  ],
   "tasks": {
     "frontend": {
       "name": "frontend",
-      "command": "npm start",
+      "command": "npm install --prefix FE && npm start --prefix FE",
       "runAtStart": true,
-      "dir": "FE",
+      "installDependencies": true,
       "preview": {
         "port": 3000,
         "prLink": true
@@ -24,9 +12,9 @@
     },
     "backend": {
       "name": "backend",
-      "command": "npm start",
+      "command": "npm install --prefix BE && npm start --prefix BE",
       "runAtStart": true,
-      "dir": "BE",
+      "installDependencies": true,
       "preview": {
         "port": 3002
       }
